@@ -100,8 +100,8 @@ function displayPath(path, distance) {
     
     // Create path coordinates
     const pathCoords = path.map(name => {
-        const [lat, lon] = markers[name].getLatLng();
-        return [lat, lon];
+        const latLng = markers[name].getLatLng();
+        return [latLng.lat, latLng.lng];
     });
     
     // Draw new path
