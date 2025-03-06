@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Landmarks Shortest Path</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>World Landmarks Shortest Path Finder</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="startPoint">Starting Point:</label>
+                <select id="startPoint" required>
+                    <option value="">Select Starting Point</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="endPoint">Destination:</label>
+                <select id="endPoint" required>
+                    <option value="">Select Destination</option>
+                </select>
+            </div>
+            <button onclick="findShortestPath()" class="find-path-btn">Find Shortest Path</button>
+        </div>
+        <div id="map"></div>
+        <div id="pathDetails" class="path-details">
+            <h3>Route Information</h3>
+            <div class="route-info"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/visualization.js') }}"></script>
+</body>
+</html>
